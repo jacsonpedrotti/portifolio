@@ -1,0 +1,1039 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Configurações gerais responsivas */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, rgb(37, 36, 36) 0%, rgb(51, 45, 45) 8%, rgb(59, 58, 58) 100%);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>NAVEGAÇÃO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+nav {
+    position: fixed;
+    height: auto;
+    min-height: 60px;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.4s ease;
+    padding: 10px 0;
+}
+
+nav:hover {
+    margin-top: 0px;
+    background-color: #211f1f99;
+    transition: 1.4s ease;
+}
+
+nav:hover>.arrow {
+    display: none;
+    transition: 2s ease;
+}
+
+nav:hover>.nav-itens {
+    transition: 2s ease;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav-itens {
+    display: none;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.link-nav {
+    color: #808080;
+    font-size: clamp(16px, 2vw, 19px);
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+.link-nav:hover {
+    text-shadow: 2px 2px 20px #808080;
+}
+
+.link-nav:active {
+    color: #808080;
+    box-shadow: none;
+}
+
+.arrow {
+    opacity: 0;
+    color: #808080;
+    font-size: 45px;
+    animation: animate 1.5s linear infinite;
+    z-index: -1;
+    cursor: pointer;
+
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>ANIMAÇÃO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+}
+
+
+.hidden-1 {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+.show-1 {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+    transform: translateX(0);
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>SECTION 1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+#section-1 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#name {
+    font-size: clamp(30px, 5vw, 70px);
+    color: #808080;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+#span-pedrotti {
+    font-size: clamp(30px, 5vw, 70px);
+    color: transparent;
+    -webkit-text-stroke: clamp(1px, 0.5vw, 3px) #808080;
+    text-shadow: -1px -1px 100px #808080;
+}
+
+#profession {
+    font-size: clamp(18px, 2vw, 30px);
+    color: #808080;
+    font-weight: 400;
+}
+
+.div-logo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.logo {
+    height: clamp(40px, 8vw, 75px);
+    width: clamp(40px, 8vw, 75px);
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+#text-logo {
+    position: absolute;
+    background: rgba(33, 31, 31, 0.95);
+    padding: 20px;
+    border-radius: 20px;
+    width: clamp(250px, 90vw, 500px);
+    max-width: 90vw;
+    z-index: 100;
+    display: none;
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.title-logo {
+    font-size: 40px;
+    color: #808080;
+    display: flex;
+    text-align: center;
+
+}
+
+.logo:hover {
+    box-shadow: 1px 1px 20px #808080;
+    transition: 0.5s ease;
+}
+
+#div-logo-html:hover>#text-logo {
+    display: flex;
+    left: 750px;
+}
+
+#div-logo-css:hover>#text-logo {
+    display: flex;
+    left: 662px;
+}
+
+#div-logo-js:hover>#text-logo {
+    display: flex;
+    left: 574px;
+}
+
+#div-logo-react:hover>#text-logo {
+    display: flex;
+    left: 486px;
+}
+
+#div-logo-bootstrap:hover>#text-logo {
+    display: flex;
+    left: 398px;
+}
+
+#div-logo-node:hover>#text-logo {
+    display: flex;
+    left: 310px;
+}
+
+#div-logo-git:hover>#text-logo {
+    display: flex;
+    left: 222px;
+}
+
+#div-logo-git-hub:hover>#text-logo {
+    display: flex;
+    left: 134px;
+}
+
+#img-computer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>SECTION 2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+#section-2 {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#title-section-2 {
+    font-size: clamp(30px, 4vw, 50px);
+    color: #808080;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-project {
+    display: none;
+}
+
+.button-project {
+    display: none;
+}
+
+.div-section-2-1,
+.div-section-2-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+#project {
+    background: rgba(33, 31, 31, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.img-project {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Centralização das imagens apenas para telas maiores */
+@media screen and (min-width: 769px) {
+    .img-project {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Ajuste específico para a imagem do Mario Jump */
+    #project:first-child .img-project {
+        width: 80%;
+        object-position: center 20%;
+        transform: translateX(30px);
+    }
+
+    /* Ajuste específico para a imagem do Conversor de Moedas */
+    .div-section-2-2 #project:first-child .img-project {
+        transform: translateX(5px);
+        object-position: center;
+        object-fit: contain;
+    }
+
+    /* Ajuste específico para a imagem do Serviço de Encanador Mario */
+    .div-section-2-1 #project:nth-child(4) .img-project {
+        width: 85%;
+        object-position: center;
+        object-fit: contain;
+        margin: 0 auto;
+        height: 220px;
+    }
+
+    /* Ajuste específico para a imagem do Batman */
+    .div-section-2-1 #project:nth-child(3) .img-project {
+        width: 85%;
+        object-position: center;
+        object-fit: contain;
+        margin: 0 auto;
+        height: 220px;
+    }
+}
+
+.text-project {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title-project {
+    font-size: clamp(20px, 3vw, 24px);
+    color: #808080;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tecnology-project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: center;
+}
+
+.p-tecnology-project {
+    height: 25px;
+    width: auto;
+}
+
+.span-title-section-2 {
+    color: #FFFFFF;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.line-project {
+    background-color: #808080;
+    width: 70%;
+    height: 4px;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+
+.p-project {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+.link-project {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.link-project:hover {
+    color: #808080;
+}
+
+.link-project:active {
+    opacity: 0.5;
+}
+
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>SECTION 3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+#section-3 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#line-top {
+    width: 60%;
+    height: 10px;
+    background-color: #808080;
+    margin-top: 5%;
+    margin-left: 40%;
+    border-radius: 20px;
+}
+
+.div-section-3 {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 7%;
+    margin-left: 5%;
+}
+
+.div-section-3-1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#title-quem-sou-eu {
+    font-size: 28px;
+    font-weight: 400;
+    color: #808080;
+}
+
+#p-quem-sou-eu {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+#img-jacson {
+    width: 300px;
+    border-radius: 200px;
+}
+
+#line-bottom {
+    width: 60%;
+    height: 10px;
+    background-color: #808080;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+/* Media queries específicas para a seção 3 */
+@media screen and (max-width: 1024px) {
+    .div-section-3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        gap: 40px;
+    }
+
+    .div-section-3-1 {
+        width: 80%;
+    }
+
+    #img-jacson {
+        width: 250px;
+    }
+
+    #line-top,
+    #line-bottom {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: auto;
+        display: none;
+    }
+
+    .nav-itens {
+        display: none !important;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .nav-project {
+        display: none;
+    }
+
+    .div-section-2-1,
+    .div-section-2-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Ajuste específico para a imagem do Serviço de Encanador Mario em mobile */
+    .div-section-2-1 #project:nth-child(4) .img-project {
+        width: 90%;
+        object-position: center;
+        object-fit: contain;
+        margin: 0 auto;
+        height: 200px;
+    }
+
+    /* Ajuste específico para a imagem do Batman em mobile */
+    .div-section-2-1 #project:nth-child(3) .img-project {
+        width: 90%;
+        object-position: center;
+        object-fit: contain;
+        margin: 0 auto;
+        height: 200px;
+    }
+
+    /* Estilo responsivo para a seção 1 em mobile */
+    .div-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    #div-logo-html,
+    #div-logo-css,
+    #div-logo-js,
+    #div-logo-react,
+    #div-logo-bootstrap,
+    #div-logo-node,
+    #div-logo-git,
+    #div-logo-git-hub {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 250px;
+        background: rgba(33, 31, 31, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+        text-align: center;
+    }
+
+    #div-logo-html h1,
+    #div-logo-css h1,
+    #div-logo-js h1,
+    #div-logo-react h1,
+    #div-logo-bootstrap h1,
+    #div-logo-node h1,
+    #div-logo-git h1,
+    #div-logo-git-hub h1 {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 22px;
+        color: #808080;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #div-logo-html:hover,
+    #div-logo-css:hover,
+    #div-logo-js:hover,
+    #div-logo-react:hover,
+    #div-logo-bootstrap:hover,
+    #div-logo-node:hover,
+    #div-logo-git:hover,
+    #div-logo-git-hub:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(128, 128, 128, 0.3);
+    }
+
+    #text-logo {
+        position: relative;
+        top: 0;
+        left: 0 !important;
+        margin: 15px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        padding: 10px;
+        width: 100%;
+        flex: 1;
+    }
+
+    .title-logo {
+        font-size: 22px;
+        margin-bottom: 15px;
+        color: #808080;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #text-logo p {
+        font-size: 15px;
+        text-align: center;
+        color: #b3b3b3;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+
+    .logo {
+        height: 70px;
+        width: 70px;
+        margin: 15px auto;
+        object-fit: contain;
+    }
+
+    /* Resto das configurações existentes */
+    #text-logo {
+        position: relative;
+        top: 0;
+        left: 0 !important;
+        margin: 10px auto;
+    }
+
+    #project {
+        max-width: 100%;
+    }
+
+    .container-curriculo {
+        grid-template-columns: 1fr;
+    }
+
+    .div-contact {
+        flex-direction: column;
+    }
+
+    #contact,
+    #my-form {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .div-section-3-1 {
+        width: 95%;
+    }
+
+    #title-quem-sou-eu {
+        font-size: 22px;
+    }
+
+    #p-quem-sou-eu {
+        font-size: 15px;
+    }
+
+    #img-jacson {
+        width: 180px;
+    }
+
+    #line-top,
+    #line-bottom {
+        width: 90%;
+    }
+
+    /* Ajuste específico para a imagem do Serviço de Encanador Mario em telas muito pequenas */
+    .div-section-2-1 #project:nth-child(4) .img-project {
+        width: 95%;
+        height: 180px;
+    }
+
+    /* Ajuste específico para a imagem do Batman em telas muito pequenas */
+    .div-section-2-1 #project:nth-child(3) .img-project {
+        width: 95%;
+        height: 180px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SECTION 4 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+
+.curriculo {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-download-curriculo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.curriculo h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    color: #808080;
+    text-align: center;
+}
+
+.curriculo h3 {
+    font-size: clamp(18px, 3vw, 24px);
+    color: #808080;
+    text-align: center;
+}
+
+.curriculo h4 {
+    font-size: clamp(16px, 2vw, 20px);
+    color: #808080;
+    text-align: center;
+}
+
+.container-curriculo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.curriculo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-curriculo {
+    background: none;
+    border: 1px solid #808080;
+    border-radius: 30px;
+    width: 250px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.btn-curriculo:hover {
+    transition: 0.3s;
+    border: 1px solid #808080;
+    color: #808080;
+}
+
+.btn-curriculo:active {
+    opacity: 0.5;
+}
+
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>SECTION 5<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+#section-5 {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.div-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#contact {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(33, 31, 31, 0.95);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#my-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(33, 31, 31, 0.95);
+    border-radius: 10px;
+}
+
+.title-form {
+    font-size: clamp(24px, 3vw, 32px);
+    color: #808080;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: clamp(14px, 2vw, 16px);
+    color: #808080;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #808080;
+    border-radius: 5px;
+    color: #808080;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.send {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #808080;
+    color: #808080;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: clamp(14px, 2vw, 16px);
+    transition: 0.3s ease;
+}
+
+.icon {
+    width: 30px;
+    margin-right: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+footer>p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+footer p>a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVIDADE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+@media screen and (max-width: 1200px) {
+
+    .div-section-2-1,
+    .div-section-2-2 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #section-1,
+    #section-2,
+    #section-3,
+    #section-4,
+    #section-5 {
+        padding: 60px 10px;
+    }
+
+    .nav-project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-project {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .tecnology-project {
+        justify-content: center;
+    }
+
+    .curriculo h2,
+    .curriculo h3,
+    .curriculo h4 {
+        text-align: center;
+    }
+
+    input,
+    textarea,
+    .send {
+        font-size: 14px;
+    }
+
+    .div-logo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    #text-logo {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    #project {
+        max-width: 100%;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media screen and (max-width: 320px) {
+
+    #name,
+    #span-pedrotti {
+        font-size: 24px;
+    }
+
+    #profession {
+        font-size: 16px;
+    }
+
+    .div-logo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo {
+        height: 35px;
+        width: 35px;
+    }
+
+    #section-1,
+    #section-2,
+    #section-3,
+    #section-4,
+    #section-5 {
+        padding: 40px 5px;
+    }
+
+    .img-project {
+        height: 150px;
+    }
+
+    .text-project {
+        padding: 15px;
+    }
+}
+
+/* Ajustes para telas muito grandes */
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 18px;
+    }
+
+    .div-section-2-1,
+    .div-section-2-2 {
+        max-width: 1400px;
+    }
+}
